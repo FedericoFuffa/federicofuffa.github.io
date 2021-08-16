@@ -261,22 +261,3 @@ h3 {
     font-size: 13px;
     color: #aaa;
 }
-
-
-.scroll {
-    right: 0;
-    width: 80px;
-    height: 80px;
-    display: block;
-    text-align: center;
-    line-height: 80px;
-    color: #fff;
-    font-size: 35px;
-    text-decoration: none;
-    z-index: 10000;
-}
-
-
-
-
-
