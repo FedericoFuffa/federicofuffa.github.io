@@ -276,24 +276,7 @@ h3 {
     z-index: 10000;
 }
 
-.scroll.top {
-    top: calc(50% - 80px);
-}
 
-#arrowup {
-    position: fixed;
-    right: 30px;
-    top: 88%;
-    color: #afafaf;
-    transition: 0.3;
-    opacity: 0.5;
-}
-
-#arrowup:hover {
-    color: #fff;
-    border-radius: 30px;
-    opacity: 0.5;
-}
 
 
 
