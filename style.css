@@ -26,7 +26,7 @@ html {
 
 body {
     font-family: 'Poppins', sans-serif;
-    background-color: #424242;
+    background-color: #333333;
 }
 
 
@@ -34,121 +34,148 @@ a {
     text-decoration: none;
 }
 
-nav {
-    height: 80px;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    background: #1b1b1b;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0px 60px 0px 60px;
-}
-
-.nav__link {
-    display: flex;
-    align-items: center;
-    width: 100%;
-    padding: 0.75rem;
-    margin-bottom: 1rem;
-    border-radius: 5px;
-    color: #afafaf;
-    transition: 0.3;
-}
-
-.nav__link:hover {
-    background-color: #363636;
-    color: #fff;
-}
-
-.nav__link i {
-    font-size: 1.5rem;
-    margin-right: 1rem;
-}
-
-nav .logo {
-    font-size: 33px;
-    color: #fff;
-    font-weight: 600;
-}
-
-nav ul {
-    display: flex;
+ul {
     list-style: none;
 }
 
-nav ul li {
-    margin: 0 5px;
+header {
+    display: flex;
+    background-color: #161818;
+    justify-content: space-around;
+    padding: 10px 0;
+    align-items: center;
 }
 
-nav ul li a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 18px;
-    font-weight: 530;
-    letter-spacing: 1px;
-    padding: 8px 10px;
-    border-radius: 5px;
-    transition: all 0.3s ease;
+.logo {
+    display: flex;
+    align-items: center;
 }
 
-nav ul li a:hover,
-nav ul li a.active {
-    color: #1b1b1b;
-    background: #fff;
+.logo-img {
+    width: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
 }
 
-nav .menu-btn i {
-    color: #fff;
-    font-size: 22px;
-    cursor: pointer;
+.header__logo {
+    color: #eeee;
+    font-size: 35px;
+    font-weight: 600;
+}
+
+.nav__list {
+    display: flex;
+    align-items: center;
+}
+
+.nav__item {
+    margin: 0 8px;
+}
+
+.nav__link {
+    padding: 10px;
+    color: #eeee;
+    font-size: 17px;
+    font-weight: 600;
+    border-radius: 7px;
+}
+
+.nav__link:hover {
+    background-color: rgb(58, 57, 57);
+}
+
+.nav__contact {
+    padding: 10px;
+    color: #eeee;
+    font-size: 30px;
+    font-weight: 600;
+    border-radius: 7px;
+}
+
+.nav__contact:hover {
+    background-color: #3a3d3d;
+}
+
+
+.header__toggle,
+.header__close {
     display: none;
 }
 
-#click {
-    display: none;
-}
-
-@media (max-width: 940px) {
-    nav .menu-btn i {
-        display: block;
-    }
-    #click:checked ~ .menu-btn i:before {
-        content: "\f00d";
-    }
-
-    nav ul {
+@media screen and (max-width: 768px) {
+    header {
         position: fixed;
-        top: 80px;
-        left: -100%;
-        opacity: 0.9;
-        background: #111;
-        height: 68vh;
+        top: 0;
         width: 100%;
-        justify-content: center;
-        text-align: center; 
-        display: block;
-        transition: all 0.3s ease;
-        border-radius: 0px 0px 20px 20px;
+        height: 70px;
+        justify-content: space-between;
+        padding: 0 28px;
     }
 
-    #click:checked ~ ul {
-        left: 0%;
+    
+
+    .header__logo {
+        font-size: 30px;
     }
 
-    nav ul li {
-        margin: 40px 0;
+    .header__toggle {
+        display: inline;
+        color: #eeee;
+        font-size: 24px;
     }
-    nav ul li a {
-        font-size: 20px;
+
+    .header__close {
+        top: 25px;
+        position: absolute;
+        right: 28px;
         display: block;
+        font-size: 24px;
+        border-radius: 50%;
+    }
+
+    .header__close:hover {
+        background-color: transparent;
+    }
+
+    .header__toggle {
+        cursor: pointer;
+    }
+    
+    .header__close {
+        cursor: pointer;
+    }
+
+    .nav {
+        position:fixed;
+        top: 0;
+        right: -100%;
+        background-color: #161818;
+        color: #eeee;
+        width: 60%;
+        height: 100vh;
+        padding: 24px 0;
+        z-index: 100;
+        transition: 0.5s;
+        border-radius: 0 0 0 50%;
+    }
+
+    .nav__list {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .nav__item {
+        margin: 2rem 0;
+    }
+
+    .show {
+        right: 0;
     }
 }
 
 #li {
     font-size: 17px;
-    font-weight: 400;
+    font-weight: 600;
 }
 
 .section1, .section2, .section3, .section4 {
